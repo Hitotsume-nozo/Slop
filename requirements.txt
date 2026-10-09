@@ -1,3 +1,4 @@
+
 # ============================================================
 # Slop — consolidated requirements for all three projects:
 #   diabetes_mlp/                 (MLP on tabular diabetes CSV)
@@ -17,6 +18,12 @@
 numpy>=1.26,<3
 pandas>=2.1
 scipy>=1.11
+=======
+# --- Core numerics / data ---
+numpy>=1.26,<3
+pandas>=2.1
+scipy>=1.16
+>>>>>>> cb2f63d (trained)
 
 # --- Machine learning ---
 scikit-learn>=1.4
@@ -28,7 +35,3 @@ torchvision>=0.17
 # --- Plotting / images ---
 matplotlib>=3.8
 pillow>=10.0
-
-# All other imports in the codebase are from the Python standard
-# library (os, sys, json, glob, math, random, time, copy, wave,
-# subprocess, dataclasses, typing), so nothing else is required.
