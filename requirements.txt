@@ -1,0 +1,34 @@
+# ============================================================
+# Slop — consolidated requirements for all three projects:
+#   diabetes_mlp/                 (MLP on tabular diabetes CSV)
+#   handwritten_cnn/              (CNN on MyHandwrittenDigits images)
+#   catdog_audio_classifier/      (audio classifier on Cats and Dogs WAVs)
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# NOTE on torch/torchvision: plain "pip install" gives CPU wheels, which
+# work fine for all three pipelines. For NVIDIA GPU acceleration, install
+# the CUDA build first, e.g.:
+#   pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu124
+# ============================================================
+
+# --- Core numerics / data ---
+numpy>=1.26,<3
+pandas>=2.1
+scipy>=1.11
+
+# --- Machine learning ---
+scikit-learn>=1.4
+
+# --- Deep learning (CPU wheels; see note above for CUDA) ---
+torch>=2.2
+torchvision>=0.17
+
+# --- Plotting / images ---
+matplotlib>=3.8
+pillow>=10.0
+
+# All other imports in the codebase are from the Python standard
+# library (os, sys, json, glob, math, random, time, copy, wave,
+# subprocess, dataclasses, typing), so nothing else is required.
